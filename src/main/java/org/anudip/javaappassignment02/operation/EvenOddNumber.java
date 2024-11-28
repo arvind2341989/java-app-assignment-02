@@ -16,9 +16,9 @@ public class EvenOddNumber {
 			result = "-1";
 		} else if(num == 0) {
 			result = "-2";
-		} else if((num % 2) == 0) {
-			result = "Even Number";
-		}
+		} /*
+			 * else if((num % 2) == 0) { result = "Even Number"; }
+			 */
 		
 		return result;
 	}
