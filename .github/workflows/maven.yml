@@ -12,4 +12,10 @@ jobs:
           java-version: 17
           distribution: 'temurin'
           architecture: x64
+      - name: Cache Maven packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
       - run: mvn -B test --file pom.xml
